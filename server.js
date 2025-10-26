@@ -5,7 +5,7 @@ const app = express();
 
 app.get("/comext", async (req, res) => {
   const query = new URLSearchParams(req.query).toString();
-  const target = "https://easycomextapi.estat.ec.europa.eu/rest/data/DS-059322?" + query;
+  const target = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/DS-059322?" + query;
   console.log("Fetching:", target);
   try {
     const eurostat = await fetch(target);
